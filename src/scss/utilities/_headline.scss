@@ -1,0 +1,20 @@
+$headline-highlights: (
+    'dark',
+    'primary',
+    'secondary',
+    'quaternary',
+    'quinary'
+);
+
+.headline {
+    font-size: get-size('700');
+    max-width: 20ch;
+
+    @include media-query('md') {
+        font-size: get-size('800');
+    }
+
+    @include media-query('lg') {
+        font-size: get-size('900');
+    }
+}

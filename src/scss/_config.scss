@@ -21,7 +21,7 @@ $gorko-size-scale: (
   '700': $gorko-base-size * 2.36,
   '800': $gorko-base-size * 3.15,
   '900': $gorko-base-size * 4.2,
-  'major': $gorko-base-size * 5.6
+  'major': $gorko-base-size * 5.6,
 );
 
 /**
@@ -33,10 +33,24 @@ $gorko-colors: (
   'dark': #38445b,
   'dark-shade': #263147,
   'dark-glare': #505c73,
-  'light': #efefef,
-  'light-shade': #fdfdfd,
+  'light': #f9f4e3,
+  'light-shade': #fff6d7,
   'light-glare': #fdfbf3,
-  'primary': #513aa6
+  'primary': #513aa6,
+  'primary-shade': #432e92,
+  'primary-glare': #654ac9,
+  'secondary': #6ac2b6,
+  'secondary-shade': #35a495,
+  'secondary-glare': #98e2d8,
+  'tertiary': #ffd490,
+  'tertiary-shade': #ffca77,
+  'tertiary-glare': #ffdeaa,
+  'quaternary': #ff7f5c,
+  'quaternary-shade': #f96841,
+  'quaternary-glare': #fe9476,
+  'quinary': #fa576e,
+  'quinary-shade': #fc3e59,
+  'quinary-glare': #f26c7f,
 );
 
 /**
@@ -48,65 +62,66 @@ $gorko-config: (
   'bg': (
     'items': $gorko-colors,
     'output': 'standard',
-    'property': 'background'
+    'property': 'background',
   ),
   'color': (
     'items': $gorko-colors,
     'output': 'standard',
-    'property': 'color'
+    'property': 'color',
   ),
   'flow-space': (
     'items': $gorko-size-scale,
     'output': 'responsive',
-    'property': '--flow-space'
+    'property': '--flow-space',
   ),
   'font': (
     'items': (
-      'base': 'sans-serif',
-      'sans': '"Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      'base': '"Literata", Georgia, serif',
+      'sans': '"Red Hat Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
     ),
     'output': 'standard',
-    'property': 'font-family'
+    'property': 'font-family',
   ),
   'gap-top': (
     'items': $gorko-size-scale,
     'output': 'responsive',
-    'property': 'margin-top'
+    'property': 'margin-top',
   ),
   'leading': (
     'items': (
       'loose': 1.7,
       'tight': 1.3,
-      'flat': '1.1'
+      'flat': '1.1',
     ),
     'output': 'standard',
-    'property': 'line-height'
+    'property': 'line-height',
   ),
   'measure': (
     'items': (
       'micro': '10ch',
       'compact': '30ch',
       'short': '40ch',
-      'long': '65ch'
+      'long': '65ch',
     ),
     'output': 'responsive',
-    'property': 'max-width'
+    'property': 'max-width',
   ),
   'text': (
     'items': $gorko-size-scale,
     'output': 'responsive',
-    'property': 'font-size'
+    'property': 'font-size',
   ),
   'weight': (
     'items': (
       'normal': 400,
-      'bold': 900
+      'bold': 900,
     ),
     'output': 'standard',
-    'property': 'font-weight'
+    'property': 'font-weight',
   ),
   'breakpoints': (
     'md': '(min-width: 37em)',
-    'lg': '(min-width: 62em)'
-  )
+    'lg': '(min-width: 62em)',
+  ),
 );
+

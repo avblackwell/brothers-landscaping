@@ -4,6 +4,7 @@
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
+// import reset
 @import 'reset';
 
 // Global styles start
@@ -15,12 +16,14 @@ body {
   background: get-color('light');
   color: get-color('dark-shade');
   line-height: 1.5;
+  font-size: get-size('500');
 
   @include apply-utility('font', 'base');
 }
 
 a:not([class]) {
   color: currentColor;
+  text-decoration-color: get-color('quinary');
 }
 
 :focus {
@@ -42,25 +45,35 @@ h4 {
   @include apply-utility('leading', 'flat');
 }
 
-dl {
-  display: grid;
-  grid-template-columns: minmax(0, max-content) 1fr;
-  grid-gap: 0.5rem 1.5rem;
-}
-
 // High contrast selection because it can help visually-impaired
 // folks read the text easier
 ::selection {
   color: get-color('light');
 
-  // We set this as an RGBA because that's how you get a solid color, by using 0.99
+  // We set this as an RGBA because that’s how you get a solid color, by using 0.99
   // alpha value. Browsers are wild.
   background: rgba(get-color('dark-shade'), 0.99);
 }
 
 // Import blocks
+@import 'blocks/definition-group';
+@import 'blocks/tags-list';
+@import 'blocks/site-foot';
+@import 'blocks/site-head';
+@import 'blocks/nav';
+@import 'blocks/button';
+@import 'blocks/skip-link';
+@import 'blocks/intro';
+@import 'blocks/cta';
+@import 'blocks/featured-service';
 
 // Import utilities
+@import 'utilities/dot-shadow';
 @import 'utilities/flow';
+@import 'utilities/frame';
+@import 'utilities/panel';
+@import 'utilities/radius';
+@import 'utilities/site-wrap';
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';
+@import 'utilities/headline';
